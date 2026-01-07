@@ -34,7 +34,7 @@ I implemented an Extended Star Schema to optimize performance:
 * **Bridge Table:** `Artwork_Artist` (linking Artists and Artworks).
 * **Dimension Tables:** `Dim_Artists`, `Dim_Artworks`, `Dim_Date`.
 
-![Data Model Schema]
+**Data Model Schema
 *<img width="1131" height="743" alt="Ảnh chụp màn hình 2026-01-07 195256" src="https://github.com/user-attachments/assets/d93a2884-8436-45fa-9e1d-3054a8165f9e" />*
 
 ### 4.3. Key DAX Measures
@@ -45,7 +45,7 @@ I implemented an Extended Star Schema to optimize performance:
 ## 5. Dashboard & Visualizations
 The dashboard provides a comprehensive view of the collection:
 
-![Dashboard Overview]
+**Dashboard Overview
 *<img width="1723" height="1072" alt="image" src="https://github.com/user-attachments/assets/0384b666-443c-401f-b12f-fb6ea1d46314" />*
 
 * **KPI Cards:** Total Artworks (158K), Total Artists (16K), Avg Creation Year (1959).
