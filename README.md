@@ -1,13 +1,34 @@
 # MoMA Art Collection Analysis - Data Driven Decision Making Project
 
-## 1. Project Overview & Problem Definition
+## 1. Project Overview & Data Problem Definition
 **Project Topic:** Analysis of the Museum of Modern Art (MoMA) Collection.
-**Goal:** To explore patterns in MoMA's collecting behavior, understand trends in artistic mediums/artist representation over time, and identify potential gaps in the dataset.
+
+**Datasets Overview** comprises 157,630 accessioned artworks along with their associated metadata, including artist, title, medium, creation date, dimensions, and acquisition date.
+
+**General Goal:** To explore patterns in MoMA's collecting behavior, understand trends in artistic mediums/artist representation over time, and identify potential gaps in the dataset.
+
+**Decision Context:**
+* **Who needs to decide?**
+    The primary stakeholders are **Museum Curators, Exhibition Strategists, and Collection Managers**. They are responsible for shaping the museum's identity and ensuring its relevance in the modern art world.
+* **What decisions need data?**
+    To maintain MoMA's prestige and cultural relevance, these stakeholders need data-driven evidence to:
+    1.  **Exhibition Planning:** Determine which artistic movements or mediums (e.g., Photography vs. Painting) are trending to curate attractive exhibitions.
+    2.  **Acquisition Strategy:** Identify gaps in the collection (e.g., underrepresented artists or time periods) to guide future artwork purchases.
+    3.  **Diversity & Inclusion:** Assess the gender and nationality balance within the collection to address historical biases.
 
 **Business Relevance:**
 The insights derived help MoMA identify artistic trends, significant time periods, and assess cultural diversity (gender/nationality) within their collection. This supports effective exhibition strategies and collection management decisions.
 
-## 2. Decision Questions
+## 2. Problem Statement & Decision Questions
+**The Business Issue:**
+While MoMA possesses a vast historical archive, the raw data contains significant inconsistencies, redundancy, and missing values (e.g., unformatted dates, duplicate artist entries). Without processing this data, the museum operates on intuition rather than evidence, risking:
+* **Stagnation:** Failing to capture contemporary art trends (post-1960s) effectively.
+* **Bias:** Unknowingly perpetuating a gender gap or lack of diversity in artist representation.
+* **Inefficiency:** Inability to visualize the "Acquisition Trend" over decades to forecast future resource allocation.
+
+**Project Goal:**
+This project aims to clean, model, and visualize the MoMA dataset to provide a transparent view of the collection's evolution. By transforming raw records into actionable KPIs (e.g., *% Contemporary Art*, *Acquisition YoY Growth*), we empower stakeholders to make informed decisions about collection management and exhibition strategies.
+
 To achieve the project goals, this analysis answers the following key decision questions:
 1.  **How modern are the artworks at the Museum?** (Tracking trends across creation and acquisition dates).
 2.  **Which artists are featured the most?** (Identifying top contributors).
