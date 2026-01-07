@@ -133,4 +133,4 @@ Based on the data evidence, I propose the following strategic actions for MoMA:
 2.  **Contextualize "Top Artists" Metrics:** When evaluating artist prominence, stakeholders must account for the **Medium Bias**. A painter with 20 works might be as significant as a photographer with 500 prints. KPIs should be segmented by Department to ensure fair comparison.
 3.  **Sustain Contemporary Growth:** The steady acquisition trend since the 1990s is a positive signal. MoMA should continue focusing on **Media and Performance** art (currently ~4,000 items) to stay ahead in the 21st-century digital art landscape.
 
-**Course:** Data Driven Decision Making - Mone Lise
+**Course:** Data Driven Decision Making - Mone Lise Team
