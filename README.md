@@ -35,22 +35,48 @@ To achieve the project goals, this analysis answers the following key decision q
 3.  **Are there any trends in the dates of acquisition?** (Analyzing growth periods like the 1960s surge).
 4.  **What types of artwork are most common?** (Department and classification breakdown).
 
-## 3. Data Source & Tech Stack
-* **Dataset:** MoMA Collection (157,630 records) including `Artists.csv` and `Artworks.csv`.
-* **Tools Used:**
-    * **SQL (MySQL):** For data cleaning, transformation, and normalization.
-    * **Power BI:** For data modeling (Star Schema), DAX measures, and interactive visualization.
+## 3. Data Understanding & Pre-processing
+**Original Dataset:**
+Initially, the dataset consisted of two raw CSV files with significant redundancy:
+* **`Artworks.csv` (30 columns):** Included many physical attributes (Dimensions, Weight, Seat Height, etc.) and duplicated artist details (ArtistBio, Nationality, Gender) which already existed in the Artists table.
+* **`Artists.csv` (9 columns):** Contained biographical data of artists.
 
-## 4. Methodology & Execution
+**The Redundancy Problem:**
+Upon inspection, I identified a **Many-to-Many relationship** issue where specific attributes (`ArtistBio`, `Nationality`, `Gender`, `BeginDate`, `EndDate`) were repeated in the `Artworks` table. Direct joining would lead to data inconsistency and performance issues (redundancy problem).
 
-### 4.1. Data Cleaning & Transformation (SQL)
-The raw data contained inconsistencies and redundancy. Key SQL techniques applied:
+**Pre-processing Action:**
+Before importing data into SQL/Power BI, I utilized **Excel** to:
+1.  **Remove irrelevant attributes:** Eliminated physical dimension columns (e.g., *Circumference, Depth, Weight*) that were not relevant to the strategic decision questions.
+2.  **Schema Restructuring:** Redesigned the data model into 3 focused tables to optimize SQL querying and insight extraction.
+
+## 4. Data Modeling Strategy & Execution
+To solve the redundancy problem, I normalized the data into a **Star Schema** structure consisting of 3 main tables:
+
+### 4.1. Table Structure
+**1. Dim_Artworks (Fact/Dimension):**
+Stores core details about the art pieces.
+* *Attributes:* `ObjectID` (PK), `Title`, `DateCreated`, `Medium`, `CreditLine`, `AccessionNumber`, `Classification`, `Department`, `DateAcquired`, `Cataloged`.
+
+**2. Dim_Artists (Dimension):**
+Stores unique artist information, removing duplicates found in the original Artworks file.
+* *Attributes:* `ConstituentID` (PK), `DisplayName`, `ArtistBio`, `Nationality`, `Gender`, `BeginDate`, `EndDate`.
+
+**3. Artwork_Artist (Bridge Table):**
+Resolves the Many-to-Many relationship between Artists and Artworks (since one artwork can have multiple artists and vice versa).
+* *Attributes:* `ConstituentID` (FK), `ObjectID` (FK).
+
+**Data Model Schema**
+*<img width="1070" height="435" alt="Ảnh chụp màn hình 2026-01-07 213854" src="https://github.com/user-attachments/assets/033de9c3-69a1-4106-999c-c982a1f3b765" />*
+*(The resulting model is cleaner, lightweight, and specifically optimized for Power BI performance)*.
+
+### 4.2. SQL Transformation
+After defining the physical model in Excel, I used **SQL** to perform advanced data cleaning on these tables, such as:
 * **Standardization:** Converted `0` values in Year columns to `NULL` for accurate age calculations.
 * **Data Type Conversion:** Transformed `DateAcquired` from text (e.g., '4/9/1996') to SQL `DATE` format using `STR_TO_DATE`.
 * **Regex Extraction:** Extracted clean 4-digit `YearCreated` from messy text fields (e.g., "c. 1917") using `REGEXP_SUBSTR`.
 * **Handling Many-to-Many Relationships:** Used `JSON_TABLE` to split multi-value `ConstituentID` fields (e.g., "5640, 7234") into individual rows, creating a bridge table `Artwork_Artist`.
 
-### 4.2. Data Modeling (Power BI)
+### 4.3. Data Modeling (Power BI)
 I implemented an Extended Star Schema to optimize performance:
 * **Bridge Table:** `Artwork_Artist` (linking Artists and Artworks).
 * **Dimension Tables:** `Dim_Artists`, `Dim_Artworks`, `Dim_Date`.
@@ -58,7 +84,7 @@ I implemented an Extended Star Schema to optimize performance:
 **Data Model Schema**
 *<img width="1131" height="743" alt="Ảnh chụp màn hình 2026-01-07 195256" src="https://github.com/user-attachments/assets/d93a2884-8436-45fa-9e1d-3054a8165f9e" />*
 
-### 4.3. Key DAX Measures
+### 4.4. Key DAX Measures
 * **% Contemporary Art:** Calculates the ratio of artworks created after 1945.
 * **Acquisition YoY Growth:** Tracks annual growth in museum acquisitions.
 * **Artists with Works:** Distinct count to filter out artists with no linked artworks.
