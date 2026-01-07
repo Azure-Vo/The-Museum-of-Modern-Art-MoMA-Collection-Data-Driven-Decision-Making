@@ -79,7 +79,7 @@ After defining the physical model in Excel, I used **SQL** to perform advanced d
 ### 4.3. Data Modeling (Power BI)
 I implemented an Extended Star Schema to optimize performance:
 * **Bridge Table:** `Artwork_Artist` (linking Artists and Artworks).
-* **Dimension Tables:** `Dim_Artists`, `Dim_Artworks`, `Dim_Date`.
+* **Dimension Tables:** `Dim_Artists`, `Dim_Artworks`, `Dim_Date`, `DeparmentClean`.
 
 **Data Model Schema**
 *<img width="1131" height="743" alt="Ảnh chụp màn hình 2026-01-07 195256" src="https://github.com/user-attachments/assets/d93a2884-8436-45fa-9e1d-3054a8165f9e" />*
