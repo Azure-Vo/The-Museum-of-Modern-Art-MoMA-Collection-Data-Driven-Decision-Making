@@ -97,7 +97,7 @@ The dashboard provides a comprehensive view of the collection:
 
 * **KPI Cards:** Total Artworks (158K), Total Artists (16K), Avg Creation Year (1959).
 * **Acquisition Trend (Line Chart):** Shows a massive surge in acquisitions during the 1960s-1970s.
-* **Department Breakdown (Donut Chart):** "Drawings & Prints" and "Architecture & Design" make up the majority of the collection.
+* **Department Breakdown (Button Slicers):** "Drawings & Prints" and "Architecture & Design" make up the majority of the collection.
 
 ## 6. Analysis, Insights & Recommendations
 
