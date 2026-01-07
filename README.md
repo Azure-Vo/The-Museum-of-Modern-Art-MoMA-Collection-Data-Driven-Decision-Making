@@ -99,11 +99,38 @@ The dashboard provides a comprehensive view of the collection:
 * **Acquisition Trend (Line Chart):** Shows a massive surge in acquisitions during the 1960s-1970s.
 * **Department Breakdown (Donut Chart):** "Drawings & Prints" and "Architecture & Design" make up the majority of the collection.
 
-## 6. Key Insights & Recommendations
-Based on the visual analysis:
-1.  **Modernity:** While the collection covers the late 19th century, the bulk of active inventory is **Contemporary (post-1960)**.
-2.  **Top Contributors:** **Ludwig Mies van der Rohe** is the top featured artist (~15k works), driven by large donations in Architecture & Design.
-3.  **Gender Disparity:** The collection is heavily skewed with approx. **80% male artists** vs. 20% female artists, highlighting a gap in representation.
-4.  **Medium Dominance:** High reproducibility mediums (Photography, Prints) have much higher counts compared to Painting & Sculpture.
+## 6. Analysis, Insights & Recommendations
 
-**Course:** Data Driven Decision Making
+### 6.1. Interpretation of Visuals
+The visualization component reveals significant structural characteristics of the MoMA collection:
+* **The Gender Gap:** The data exposes a severe disparity in artist representation. With **9,940 male artists** compared to only **2,435 female artists**, the collection is heavily skewed (~80% Male), reflecting historical biases in the art world.
+* **Volume vs. Medium:** There is a strong correlation between the "reproducibility" of a medium and its volume in the collection. Departments like **Photography** and **Prints** have massive item counts due to the nature of the medium (one artist can produce hundreds of prints), whereas unique media like "Painting & Sculpture" have lower counts.
+
+### 6.2. Answers to Decision Questions
+
+**Q1: How modern are the artworks at the Museum?**
+* **Finding:** While the collection spans the late 19th century, the bulk of the active inventory is **Contemporary (post-1960)**.
+* **Evidence:** The "Acquisition Trend Over Time" chart shows a massive upward spike starting in the 1960s-1970s and continuing into the 2000s, proving the museum actively keeps the collection current.
+
+**Q2: Which artists are featured the most?**
+* **Finding:** The top featured artists are primarily from **Architecture & Design** and **Photography**.
+* **Evidence:** **Ludwig Mies van der Rohe** is the top artist (~15,500 works), followed by **Eugène Atget**. This is driven by large-scale donations of architectural sketches and photographic prints, rather than individual paintings.
+
+**Q3: Are there any trends in the dates of acquisition?**
+* **Finding:** Acquisition is not linear; it is driven by specific events and strategic expansion.
+* **Evidence:**
+    * **The 1960s Surge:** A notable peak occurred due to major donations in Architecture & Design.
+    * **Steady Growth (1990s-Present):** The museum has maintained a high and consistent level of acquisition in the digital age, indicating an aggressive expansion strategy.
+
+**Q4: What types of artwork are most common?**
+* **Finding:** The collection is dominated by works on paper rather than canvas.
+* **Evidence:** The **Drawings & Prints** department is the largest (~80,000 artworks), followed by Architecture & Design and Photography. Traditional **Painting & Sculpture** only accounts for ~3,000 artworks. This highlights MoMA's transition from traditional physical media to capturing "multi-media" evolution.
+
+### 6.3. Final Recommendations
+Based on the data evidence, I propose the following strategic actions for MoMA:
+
+1.  **Address the Representation Gap:** The **80/20 gender imbalance** represents a critical area for improvement. Future acquisition strategies should prioritize female and non-binary artists to diversify the collection and reflect modern societal values.
+2.  **Contextualize "Top Artists" Metrics:** When evaluating artist prominence, stakeholders must account for the **Medium Bias**. A painter with 20 works might be as significant as a photographer with 500 prints. KPIs should be segmented by Department to ensure fair comparison.
+3.  **Sustain Contemporary Growth:** The steady acquisition trend since the 1990s is a positive signal. MoMA should continue focusing on **Media and Performance** art (currently ~4,000 items) to stay ahead in the 21st-century digital art landscape.
+
+**Course:** Data Driven Decision Making - Mone Lise
