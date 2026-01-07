@@ -65,7 +65,7 @@ Stores unique artist information, removing duplicates found in the original Artw
 Resolves the Many-to-Many relationship between Artists and Artworks (since one artwork can have multiple artists and vice versa).
 * *Attributes:* `ConstituentID` (FK), `ObjectID` (FK).
 
-**Data Model Schema**
+**Data Re-Modeled**
 *<img width="1070" height="435" alt="Ảnh chụp màn hình 2026-01-07 213854" src="https://github.com/user-attachments/assets/033de9c3-69a1-4106-999c-c982a1f3b765" />*
 *(The resulting model is cleaner, lightweight, and specifically optimized for Power BI performance)*.
 
