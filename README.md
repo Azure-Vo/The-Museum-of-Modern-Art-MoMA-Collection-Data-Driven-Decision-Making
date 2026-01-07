@@ -56,7 +56,7 @@ The dashboard provides a comprehensive view of the collection:
 Based on the visual analysis:
 1.  **Modernity:** While the collection covers the late 19th century, the bulk of active inventory is **Contemporary (post-1960)**.
 2.  **Top Contributors:** **Ludwig Mies van der Rohe** is the top featured artist (~15k works), driven by large donations in Architecture & Design.
-3.  **Gender Disparity:** The collection is heavily skewed with approx. [cite_start]**80% male artists** vs. 20% female artists, highlighting a gap in representation.
+3.  **Gender Disparity:** The collection is heavily skewed with approx. **80% male artists** vs. 20% female artists, highlighting a gap in representation.
 4.  **Medium Dominance:** High reproducibility mediums (Photography, Prints) have much higher counts compared to Painting & Sculpture.
 
 **Course:** Data Driven Decision Making
