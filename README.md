@@ -45,7 +45,7 @@ Initially, the dataset consisted of two raw CSV files with significant redundanc
 Upon inspection, I identified a **Many-to-Many relationship** issue where specific attributes (`ArtistBio`, `Nationality`, `Gender`, `BeginDate`, `EndDate`) were repeated in the `Artworks` table. Direct joining would lead to data inconsistency and performance issues (redundancy problem).
 
 **Pre-processing Action:**
-Before importing data into SQL/Power BI, I utilized **Excel** to:
+Before importing data into SQL/Power BI, we utilized **Excel** to:
 1.  **Remove irrelevant attributes:** Eliminated physical dimension columns (e.g., *Circumference, Depth, Weight*) that were not relevant to the strategic decision questions.
 2.  **Schema Restructuring:** Redesigned the data model into 3 focused tables to optimize SQL querying and insight extraction.
 
@@ -77,7 +77,7 @@ After defining the physical model in Excel, I used **SQL** to perform advanced d
 * **Handling Many-to-Many Relationships:** Used `JSON_TABLE` to split multi-value `ConstituentID` fields (e.g., "5640, 7234") into individual rows, creating a bridge table `Artwork_Artist`.
 
 ### 4.3. Data Modeling (Power BI)
-I implemented an Extended Star Schema to optimize performance:
+We implemented an Extended Star Schema to optimize performance:
 * **Bridge Table:** `Artwork_Artist` (linking Artists and Artworks).
 * **Dimension Tables:** `Dim_Artists`, `Dim_Artworks`, `Dim_Date`, `DeparmentClean`.
 
