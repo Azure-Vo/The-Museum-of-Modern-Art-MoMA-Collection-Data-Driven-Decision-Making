@@ -42,7 +42,7 @@ Initially, the dataset consisted of two raw CSV files with significant redundanc
 * **`Artists.csv` (9 columns):** Contained biographical data of artists.
 
 **The Redundancy Problem:**
-Upon inspection, I identified a **Many-to-Many relationship** issue where specific attributes (`ArtistBio`, `Nationality`, `Gender`, `BeginDate`, `EndDate`) were repeated in the `Artworks` table. Direct joining would lead to data inconsistency and performance issues (redundancy problem).
+Upon inspection, we identified a **Many-to-Many relationship** issue where specific attributes (`ArtistBio`, `Nationality`, `Gender`, `BeginDate`, `EndDate`) were repeated in the `Artworks` table. Direct joining would lead to data inconsistency and performance issues (redundancy problem).
 
 **Pre-processing Action:**
 Before importing data into SQL/Power BI, we utilized **Excel** to:
